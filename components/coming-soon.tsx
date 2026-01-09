@@ -23,7 +23,6 @@ export default function ComingSoon() {
 
   return (
     <div className="flex flex-col items-center text-center">
-      {/* Badge */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -1,24 +1,23 @@
-import type { Metadata } from "next";
+import React from 'react';
+import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
-import GenesisOffer from '@/components/GenesisOffer';
-import ProjectsSection from '@/components/ProjectsSection';
-import AIProductTeaser from '@/components/AIProductTeaser';
+import SpecialOffer from '@/components/SpecialOffer';
+import AIProductSection from '@/components/AIProductSection';
+import WorkSection from '@/components/WorkSection';
+import ConnectSection from '@/components/ConnectSection';
 import Footer from '@/components/Footer';
 
-export const metadata: Metadata = {
-  title: "Aspine - Engineering the Future",
-  description: "Elite technology services for tomorrow's world. Building the future today.",
-};
-
-export default function Page() {
+export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
+    <main className="min-h-screen">
+      <Navbar />
       <HeroSection />
       <ServicesSection />
-      <GenesisOffer />
-      <ProjectsSection />
-      <AIProductTeaser />
+      <SpecialOffer />
+      <AIProductSection />
+      <WorkSection />
+      <ConnectSection />
       <Footer />
     </main>
   );

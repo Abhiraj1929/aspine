@@ -1,69 +1,70 @@
+import React from 'react';
+import Link from 'next/link';
+
 export default function Footer() {
   return (
-    <footer className="py-20 px-6 border-t border-white/10 relative overflow-hidden bg-[#0a0a0f]">
-      <div className="absolute inset-0 grid-bg opacity-10"></div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-white text-black border-t-4 border-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h2 className="text-4xl font-bold glow-text mb-4">ASPINE</h2>
-            <p className="text-gray-400 text-lg mb-6 max-w-md">
-              Engineering the Future. Building tomorrow's technology infrastructure today.
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-black text-white font-black text-2xl px-4 py-3">A</div>
+              <span className="text-3xl font-black">ASPINE</span>
+            </div>
+            <p className="text-gray-600 mb-6 leading-relaxed max-w-md">
+              Building digital excellence. Elite web development, AI solutions, and custom software for businesses that demand the best.
             </p>
             <div className="flex gap-4">
-              {['Twitter', 'LinkedIn', 'GitHub'].map((social) => (
-                <a 
-                  key={social}
-                  href="#" 
-                  className="size-12 glass-card flex items-center justify-center rounded-lg hover:border-cyan-400/50 transition-all group"
-                >
-                  <span className="text-gray-400 group-hover:text-cyan-400 transition-colors">
-                    {social[0]}
-                  </span>
-                </a>
-              ))}
+              <a href="#" className="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all font-bold">
+                TW
+              </a>
+              <a href="#" className="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all font-bold">
+                LI
+              </a>
+              <a href="#" className="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all font-bold">
+                GH
+              </a>
+              <a href="#" className="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all font-bold">
+                IG
+              </a>
             </div>
           </div>
-          
+
           {/* Services */}
           <div>
-            <h3 className="text-white font-bold mb-4 text-lg">Services</h3>
+            <h3 className="text-lg font-black mb-4 uppercase tracking-wider">Services</h3>
             <ul className="space-y-3">
-              {['UI/UX Design', 'Web Development', 'CRM Systems', 'Consulting'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">UI/UX Design</Link></li>
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">Full-Stack Dev</Link></li>
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">AI Products</Link></li>
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">Custom CRM</Link></li>
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">₹999 Package</Link></li>
             </ul>
           </div>
-          
+
           {/* Company */}
           <div>
-            <h3 className="text-white font-bold mb-4 text-lg">Company</h3>
+            <h3 className="text-lg font-black mb-4 uppercase tracking-wider">Company</h3>
             <ul className="space-y-3">
-              {['About', 'Projects', 'Careers', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">About Us</Link></li>
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">Our Work</Link></li>
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">Careers</Link></li>
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">Blog</Link></li>
+              <li><Link href="#" className="text-gray-600 hover:text-black font-medium hover:underline">Contact</Link></li>
             </ul>
           </div>
         </div>
-        
+
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
-            © 2026 Aspine. All rights reserved. Built with the future in mind.
+        <div className="pt-8 border-t-2 border-black flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm font-bold text-gray-600">
+            © 2026 ASPINE. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-gray-500 hover:text-cyan-400 transition-colors">Privacy</a>
-            <a href="#" className="text-gray-500 hover:text-cyan-400 transition-colors">Terms</a>
-            <a href="#" className="text-gray-500 hover:text-cyan-400 transition-colors">Cookies</a>
+          <div className="flex gap-6 text-sm font-bold">
+            <Link href="#" className="text-gray-600 hover:text-black hover:underline">Privacy Policy</Link>
+            <Link href="#" className="text-gray-600 hover:text-black hover:underline">Terms of Service</Link>
+            <Link href="#" className="text-gray-600 hover:text-black hover:underline">Cookie Policy</Link>
           </div>
         </div>
       </div>

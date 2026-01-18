@@ -23,7 +23,6 @@ export default function ComingSoon() {
 
   return (
     <div className="flex flex-col items-center text-center">
-      {/* Badge */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -34,8 +33,6 @@ export default function ComingSoon() {
         Launch pending
       </motion.div>
 
-      {/* Main Heading */}
-      {/* Main Heading */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
